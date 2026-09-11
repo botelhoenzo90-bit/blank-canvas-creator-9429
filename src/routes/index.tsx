@@ -222,6 +222,9 @@ function Index() {
 
       <main>
         <section id="inicio" className="ps-hero">
+          <div className="hero-bg" aria-hidden="true">
+            <img src={heroImg} alt="" />
+          </div>
           <div className="hero-copy">
             <span className="mini-label">Clínica Médica Pró-Saúde · Macururé - BA</span>
             <h1>
@@ -249,17 +252,13 @@ function Index() {
               </span>
             </div>
           </div>
-          <div className="hero-photo">
-            <img src={heroImg} alt="Família sendo recebida na Clínica Médica Pró-Saúde" width={1600} height={1104} />
-            <div className="hero-photo-overlay" />
-            <div className="hero-logo">
-              <Logo />
-            </div>
-            <div className="hero-message">
-              <small>CUIDADO QUE ACOLHE</small>
-              <strong>Saúde em todas as fases da vida.</strong>
-              <Heart size={22} fill="currentColor" />
-            </div>
+          <div className="hero-logo">
+            <Logo />
+          </div>
+          <div className="hero-message">
+            <small>CUIDADO QUE ACOLHE</small>
+            <strong>Saúde em todas as fases da vida.</strong>
+            <Heart size={22} fill="currentColor" />
           </div>
         </section>
 
@@ -282,9 +281,6 @@ function Index() {
                 <div className="specialty-body">
                   <h3>{name}</h3>
                   <p>{text}</p>
-                  <a className="link-btn" href={wa} target="_blank" rel="noreferrer">
-                    Agendar atendimento <ArrowUpRight size={14} />
-                  </a>
                 </div>
               </article>
             ))}
@@ -315,9 +311,6 @@ function Index() {
                   <span>EXAME</span>
                   <h3>{name}</h3>
                   <p>{text}</p>
-                  <a className="link-btn" href={wa} target="_blank" rel="noreferrer">
-                    Saiba mais <ArrowUpRight size={13} />
-                  </a>
                 </div>
               </article>
             ))}
@@ -333,6 +326,9 @@ function Index() {
             <a href={wa} target="_blank" rel="noreferrer">
               Conhecer <ArrowUpRight size={14} />
             </a>
+          </div>
+          <div className="section-cta">
+            <Button>Agendar meu exame</Button>
           </div>
         </section>
 
@@ -485,6 +481,9 @@ function Index() {
               </article>
             ))}
           </Marquee>
+          <div className="section-cta">
+            <Button>Agendar pelo WhatsApp</Button>
+          </div>
           <div className="review-note">
             <CheckCircle2 size={15} /> Atendimento que deixa uma boa impressão do começo ao fim.
           </div>
