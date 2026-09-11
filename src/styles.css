@@ -470,7 +470,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .contact-copy { display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center; }
 .contact-copy h2 { font-size: clamp(23px, 2.8vw, 30px); color: var(--green-800); }
 .contact-copy p { font-size: 14px; color: var(--muted); max-width: 54ch; }
-.contact-details { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 4px; }
+.contact-details { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 4px; justify-content: center; }
 .contact-details span { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #34574c; }
 .contact-details svg { width: 16px; height: 16px; color: var(--green-700); }
 .contact-map { height: 340px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
