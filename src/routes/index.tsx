@@ -1,17 +1,32 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useRef, useState } from "react";
+import { Children, useState, type ReactNode } from "react";
 import {
-  Activity, Baby, CalendarDays, ChevronDown, ChevronLeft, ChevronRight,
-  ClipboardList, Clock3, Cross, Droplets, FileText, Heart, HeartPulse,
-  Instagram, MapPin, Menu, Microscope, Navigation, Phone, ShieldCheck,
-  Stethoscope, Users, X, Sparkles, CheckCircle2, ArrowUpRight
+  Activity, Baby, CalendarDays, ChevronDown, ClipboardList, Clock3, Cross,
+  Droplets, FileText, Heart, HeartPulse, Instagram, MapPin, Menu, Microscope,
+  Navigation, Phone, ShieldCheck, Stethoscope, Users, X, Sparkles,
+  CheckCircle2, ArrowUpRight
 } from "lucide-react";
 
+import logoAsset from "@/assets/logo-prosaude.png.asset.json";
 import heroImg from "@/assets/hero.jpg";
 import childImg from "@/assets/child.jpg";
 import clinicImg from "@/assets/clinic.jpg";
-import labImg from "@/assets/lab.jpg";
-import ultrasoundImg from "@/assets/ultrasound.jpg";
+
+import espCardio from "@/assets/esp-cardiologia.jpg";
+import espGineco from "@/assets/esp-ginecologia.jpg";
+import espUro from "@/assets/esp-urologia.jpg";
+import espOrto from "@/assets/esp-ortopedia.jpg";
+import espNeuro from "@/assets/esp-neurologia.jpg";
+import espNutri from "@/assets/esp-nutricao.jpg";
+import espClinico from "@/assets/esp-clinico.jpg";
+
+import exLab from "@/assets/ex-laboratorio.jpg";
+import exUltra from "@/assets/ex-ultrassom.jpg";
+import exEcg from "@/assets/ex-ecg.jpg";
+import exMapa from "@/assets/ex-mapa.jpg";
+import exHolter from "@/assets/ex-holter.jpg";
+import exEspiro from "@/assets/ex-espirometria.jpg";
+import exErgo from "@/assets/ex-ergometrico.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -49,23 +64,23 @@ const navLinks: [string, string][] = [
 ];
 
 const specialties = [
-  [HeartPulse, "Cardiologia", "Cuidado cardiovascular, prevenção e acompanhamento para manter seu coração saudável."],
-  [Baby, "Ginecologia", "Saúde feminina com acolhimento e acompanhamento em todas as fases da vida."],
-  [Activity, "Urologia", "Prevenção, diagnóstico e cuidado completo para a saúde urinária e masculina."],
-  [Cross, "Ortopedia", "Mais movimento e qualidade de vida com avaliação e cuidado especializado."],
-  [Microscope, "Neurologia", "Atenção à saúde do cérebro, memória, equilíbrio e sistema nervoso."],
-  [Droplets, "Nutrição", "Orientação alimentar individualizada para mais saúde, energia e bem-estar."],
-  [Stethoscope, "Clínico Geral", "Atendimento completo para prevenção, avaliação e cuidado em todas as idades."],
+  [HeartPulse, "Cardiologia", "Cuidado cardiovascular, prevenção e acompanhamento para manter seu coração saudável.", espCardio],
+  [Baby, "Ginecologia", "Saúde feminina com acolhimento e acompanhamento em todas as fases da vida.", espGineco],
+  [Activity, "Urologia", "Prevenção, diagnóstico e cuidado completo para a saúde urinária e masculina.", espUro],
+  [Cross, "Ortopedia", "Mais movimento e qualidade de vida com avaliação e cuidado especializado.", espOrto],
+  [Microscope, "Neurologia", "Atenção à saúde do cérebro, memória, equilíbrio e sistema nervoso.", espNeuro],
+  [Droplets, "Nutrição", "Orientação alimentar individualizada para mais saúde, energia e bem-estar.", espNutri],
+  [Stethoscope, "Clínico Geral", "Atendimento completo para prevenção, avaliação e cuidado em todas as idades.", espClinico],
 ] as const;
 
 const exams = [
-  [FileText, "Exames Laboratoriais", "Coleta segura e prática para diferentes tipos de exames."],
-  [Microscope, "Ultrassonografia", "Imagens precisas para auxiliar na investigação e no diagnóstico."],
-  [Activity, "Eletrocardiograma", "Avaliação da atividade elétrica e do ritmo do coração."],
-  [Navigation, "MAPA", "Monitoramento da pressão arterial durante 24 horas."],
-  [Clock3, "Holter", "Acompanhamento contínuo do ritmo cardíaco ao longo do dia."],
-  [Droplets, "Espirometria", "Avaliação da capacidade e função respiratória."],
-  [Activity, "Teste Ergométrico", "Avaliação cardiovascular durante esforço físico controlado."],
+  [FileText, "Exames Laboratoriais", "Coleta segura e prática para diferentes tipos de exames.", exLab],
+  [Microscope, "Ultrassonografia", "Imagens precisas para auxiliar na investigação e no diagnóstico.", exUltra],
+  [Activity, "Eletrocardiograma", "Avaliação da atividade elétrica e do ritmo do coração.", exEcg],
+  [Navigation, "MAPA", "Monitoramento da pressão arterial durante 24 horas.", exMapa],
+  [Clock3, "Holter", "Acompanhamento contínuo do ritmo cardíaco ao longo do dia.", exHolter],
+  [Droplets, "Espirometria", "Avaliação da capacidade e função respiratória.", exEspiro],
+  [Activity, "Teste Ergométrico", "Avaliação cardiovascular durante esforço físico controlado.", exErgo],
 ] as const;
 
 const reviews = [
@@ -90,7 +105,7 @@ function Button({
   light = false,
   icon = true,
 }: {
-  children?: React.ReactNode;
+  children?: ReactNode;
   href?: string;
   light?: boolean;
   icon?: boolean;
@@ -125,10 +140,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
 function Logo({ small = false }: { small?: boolean }) {
   return (
     <div className={`ps-logo ${small ? "small" : ""}`}>
-      <div className="logo-mark">
-        <Heart size={small ? 16 : 20} fill="currentColor" />
-        <Activity size={small ? 18 : 24} />
-      </div>
+      <img className="logo-img" src={logoAsset.url} alt="Logo da Clínica Médica Pró-Saúde" />
       <div>
         <strong>PRÓ-SAÚDE</strong>
         <small>CLÍNICA MÉDICA</small>
@@ -137,27 +149,29 @@ function Logo({ small = false }: { small?: boolean }) {
   );
 }
 
-function Carousel({ children, label }: { children: React.ReactNode; label: string }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const scrollBy = (dir: 1 | -1) => {
-    const el = ref.current;
-    if (!el) return;
-    const card = el.firstElementChild as HTMLElement | null;
-    const step = card ? card.offsetWidth + 18 : el.clientWidth * 0.8;
-    el.scrollBy({ left: step * dir, behavior: "smooth" });
-  };
+/** Carrossel automático estilo esteira (loop contínuo, pausa ao passar o mouse). */
+function Marquee({
+  children,
+  label,
+  duration = 44,
+}: {
+  children: ReactNode;
+  label: string;
+  duration?: number;
+}) {
+  const items = Children.toArray(children);
   return (
-    <div className="carousel">
-      <div className="carousel-viewport" ref={ref} role="group" aria-label={label}>
-        {children}
-      </div>
-      <div className="carousel-nav">
-        <button type="button" aria-label="Ver anteriores" onClick={() => scrollBy(-1)}>
-          <ChevronLeft size={20} />
-        </button>
-        <button type="button" aria-label="Ver próximos" onClick={() => scrollBy(1)}>
-          <ChevronRight size={20} />
-        </button>
+    <div className="marquee" role="group" aria-label={label}>
+      <div
+        className="marquee-track"
+        style={{ ["--marquee-duration" as string]: `${duration}s` }}
+      >
+        {items}
+        {items.map((item, i) => (
+          <div key={`clone-${i}`} aria-hidden="true" style={{ display: "contents" }}>
+            {item}
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -255,21 +269,26 @@ function Index() {
             title="Especialidades para cuidar de você"
             sub="Uma equipe preparada para acompanhar diferentes necessidades, com atenção, precisão e acolhimento."
           />
-          <Carousel label="Especialidades">
-            {specialties.map(([Icon, name, text], i) => (
+          <Marquee label="Especialidades" duration={52}>
+            {specialties.map(([Icon, name, text, img], i) => (
               <article className="specialty-card" key={name}>
-                <div className="card-icon">
-                  <Icon />
+                <div className="specialty-visual">
+                  <img src={img} alt={`Atendimento de ${name}`} loading="lazy" width={800} height={600} />
+                  <span className="card-number">0{i + 1}</span>
+                  <div className="card-icon">
+                    <Icon />
+                  </div>
                 </div>
-                <span className="card-number">0{i + 1}</span>
-                <h3>{name}</h3>
-                <p>{text}</p>
-                <a className="link-btn" href={wa} target="_blank" rel="noreferrer">
-                  Agendar atendimento <ArrowUpRight size={14} />
-                </a>
+                <div className="specialty-body">
+                  <h3>{name}</h3>
+                  <p>{text}</p>
+                  <a className="link-btn" href={wa} target="_blank" rel="noreferrer">
+                    Agendar atendimento <ArrowUpRight size={14} />
+                  </a>
+                </div>
               </article>
             ))}
-          </Carousel>
+          </Marquee>
           <div className="section-cta">
             <Button>Agendar minha consulta</Button>
           </div>
@@ -286,19 +305,11 @@ function Index() {
             </div>
             <Button light>Falar com a equipe</Button>
           </div>
-          <Carousel label="Exames">
-            {exams.map(([Icon, name, text], i) => (
+          <Marquee label="Exames e serviços" duration={48}>
+            {exams.map(([, name, text, img]) => (
               <article className="exam-card" key={name}>
                 <div className="exam-visual">
-                  {i % 3 === 0 ? (
-                    <img src={labImg} alt="Coleta laboratorial" loading="lazy" width={900} height={700} />
-                  ) : i % 3 === 1 ? (
-                    <img src={ultrasoundImg} alt="Exame de ultrassonografia" loading="lazy" width={900} height={700} />
-                  ) : (
-                    <div className="exam-icon">
-                      <Icon />
-                    </div>
-                  )}
+                  <img src={img} alt={name} loading="lazy" width={800} height={600} />
                 </div>
                 <div className="exam-card-body">
                   <span>EXAME</span>
@@ -310,7 +321,7 @@ function Index() {
                 </div>
               </article>
             ))}
-          </Carousel>
+          </Marquee>
           <div className="lab-banner">
             <div className="lab-badge">
               <Microscope />
@@ -362,28 +373,6 @@ function Index() {
                 </p>
               ))}
             </div>
-          </article>
-
-          <article className="map-mini">
-            <div className="map-pattern" />
-            <div className="map-pin">
-              <MapPin />
-            </div>
-            <span className="section-eyebrow">Onde estamos</span>
-            <h2>
-              Macururé <b>· BA</b>
-            </h2>
-            <p>Em frente ao Hospital Municipal</p>
-            <div className="map-location">
-              <span>●</span>
-              <div>
-                <b>PRÓ-SAÚDE</b>
-                <small>Clínica Médica</small>
-              </div>
-            </div>
-            <a href={mapUrl} target="_blank" rel="noreferrer">
-              Como chegar <Navigation size={14} />
-            </a>
           </article>
         </section>
 
@@ -472,7 +461,7 @@ function Index() {
             title="Confiança de quem já escolheu a Pró-Saúde"
             sub="Experiências reais de pacientes que encontraram acolhimento, organização e cuidado."
           />
-          <Carousel label="Avaliações de pacientes">
+          <Marquee label="Avaliações de pacientes" duration={56}>
             {reviews.map(([name, text]) => (
               <article className="review-card" key={name}>
                 <div className="review-top">
@@ -495,7 +484,7 @@ function Index() {
                 </div>
               </article>
             ))}
-          </Carousel>
+          </Marquee>
           <div className="review-note">
             <CheckCircle2 size={15} /> Atendimento que deixa uma boa impressão do começo ao fim.
           </div>
@@ -532,10 +521,10 @@ function Index() {
 
         <section id="contato" className="ps-contact">
           <div className="contact-copy">
-            <span className="section-eyebrow">Fale com a Pró-Saúde</span>
+            <span className="section-eyebrow">Onde estamos · Fale com a Pró-Saúde</span>
             <Logo />
             <h2>Estamos prontos para acolher você e sua família.</h2>
-            <p>Agende sua consulta ou tire suas dúvidas com nossa equipe.</p>
+            <p>Agende sua consulta, tire suas dúvidas ou venha nos visitar em Macururé - BA.</p>
             <Button>Agendar atendimento</Button>
             <div className="contact-details">
               <span>
@@ -544,6 +533,18 @@ function Index() {
               <span>
                 <MapPin /> Macururé - BA
               </span>
+            </div>
+            <div className="contact-place">
+              <b>Nosso endereço</b>
+              <p>
+                <MapPin /> Macururé - BA — Em frente ao Hospital Municipal
+              </p>
+              <p>
+                <Clock3 /> Atendimento de segunda a sexta, com agendamento pelo WhatsApp
+              </p>
+              <a href={mapUrl} target="_blank" rel="noreferrer">
+                Como chegar <Navigation size={14} />
+              </a>
             </div>
           </div>
           <div className="contact-map">
