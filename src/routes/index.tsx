@@ -252,9 +252,6 @@ function Index() {
               </span>
             </div>
           </div>
-          <div className="hero-logo">
-            <Logo />
-          </div>
           <div className="hero-message">
             <small>CUIDADO QUE ACOLHE</small>
             <strong>Saúde em todas as fases da vida.</strong>

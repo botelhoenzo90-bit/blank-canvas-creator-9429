@@ -98,17 +98,25 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
   background: #fff;
   box-shadow: var(--shadow-sm);
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 18px;
   padding: 10px max(16px, calc((100% - var(--max)) / 2));
 }
-.ps-header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.ps-header nav {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 14px;
+  overflow: hidden;
+}
 .ps-header nav a {
-  font-size: 13px;
+  font-size: 12.5px;
+  font-weight: 600;
   color: #2b4d43;
   padding: 6px 0;
   border-bottom: 2px solid transparent;
+  white-space: nowrap;
 }
 .ps-header nav a:hover { color: var(--green-700); border-color: var(--green-700); }
 .header-wa {
@@ -121,6 +129,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
   padding: 9px 16px;
   font-size: 11px;
   line-height: 1.25;
+  flex: none;
 }
 .header-wa b { font-size: 13px; }
 .header-wa-icon {
@@ -131,7 +140,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 }
 .menu-btn { display: none; border: 0; background: transparent; color: var(--green-800); padding: 6px; }
 
-.ps-logo { display: flex; align-items: center; gap: 10px; color: var(--green-800); }
+.ps-logo { display: flex; align-items: center; gap: 10px; color: var(--green-800); flex: none; }
 .logo-mark {
   width: 54px; height: 54px;
   border: 2px solid var(--gold);
@@ -605,3 +614,6 @@ footer { background: #fff; }
   background: var(--green-700); color: #fff;
   border-radius: 999px; padding: 11px 18px; font-size: 13px; font-weight: 700;
 }
+
+/* ocultar badge do Lovable */
+#lovable-badge { display: none !important; }
