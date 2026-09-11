@@ -222,6 +222,9 @@ function Index() {
 
       <main>
         <section id="inicio" className="ps-hero">
+          <div className="hero-bg" aria-hidden="true">
+            <img src={heroImg} alt="" />
+          </div>
           <div className="hero-copy">
             <span className="mini-label">Clínica Médica Pró-Saúde · Macururé - BA</span>
             <h1>
