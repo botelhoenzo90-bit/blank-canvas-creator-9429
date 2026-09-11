@@ -559,3 +559,8 @@ footer { background: #fff; }
   .footer-bottom { justify-content: center; text-align: center; }
   .floating-wa { width: 54px; height: 54px; right: 14px; bottom: 14px; }
 }
+
+@media (max-width: 760px) {
+  .hero-message { max-width: 200px; }
+  .hero-message small { font-size: 9px; letter-spacing: 1px; }
+}
