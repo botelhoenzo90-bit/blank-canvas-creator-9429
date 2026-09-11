@@ -276,7 +276,13 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .exam-visual img { width: 100%; height: 100%; object-fit: cover; }
 .exam-icon { height: 100%; display: grid; place-items: center; color: var(--green-700); }
 .exam-icon svg { width: 44px; height: 44px; }
-.exam-card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.exam-card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; flex: 1; }
+.exam-icon-badge {
+  width: 48px; height: 48px; border-radius: 14px;
+  background: #eaf4ee; color: var(--green-700);
+  display: grid; place-items: center; margin-bottom: 4px;
+}
+.exam-icon-badge svg { width: 24px; height: 24px; }
 .exam-card-body > span {
   font-size: 10px; letter-spacing: 1.6px; font-weight: 800; color: var(--green-600);
 }
@@ -290,7 +296,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
   border-radius: var(--radius);
   padding: 22px 26px;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 18px;
 }
@@ -301,11 +307,6 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 }
 .lab-banner b { display: block; font-size: 16px; letter-spacing: 1px; }
 .lab-banner span { font-size: 13px; opacity: 0.9; }
-.lab-banner > a {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: #fff; color: var(--green-700);
-  border-radius: 999px; padding: 12px 20px; font-size: 13px; font-weight: 800;
-}
 
 /* ---------------- três cards ---------------- */
 .ps-three {
@@ -507,11 +508,13 @@ footer { background: #fff; }
 .floating-wa {
   position: fixed; right: 20px; bottom: 20px; z-index: 100;
   width: 58px; height: 58px; border-radius: 50%;
-  background: #19b95d; color: #fff;
+  background: transparent;
   display: grid; place-items: center;
-  border: 4px solid #fff; box-shadow: var(--shadow-md);
+  filter: drop-shadow(0 6px 14px rgba(6, 63, 46, 0.22));
+  transition: transform 0.18s ease;
 }
-.floating-wa svg { width: 26px; height: 26px; }
+.floating-wa:hover { transform: translateY(-3px) scale(1.05); }
+.floating-wa img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 /* ---------------- responsivo ---------------- */
 @media (max-width: 1080px) {
@@ -578,10 +581,10 @@ footer { background: #fff; }
   background: linear-gradient(180deg, rgba(6, 63, 46, 0) 45%, rgba(6, 63, 46, 0.45) 100%);
 }
 .specialty-card .card-icon {
-  position: absolute; bottom: -22px; left: 20px; z-index: 2;
+  position: absolute; bottom: -22px; left: 50%; transform: translateX(-50%); z-index: 2;
   background: #fff; box-shadow: var(--shadow-sm);
 }
-.specialty-body { padding: 32px 22px 24px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.specialty-body { padding: 32px 22px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; flex: 1; }
 .specialty-card .card-number { top: 14px; right: 18px; color: #fff; opacity: 0.85; z-index: 2; }
 
 /* ---------------- onde estamos + localização ---------------- */

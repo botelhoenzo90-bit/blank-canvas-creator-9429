@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import logoAsset from "@/assets/logo-prosaude.png.asset.json";
+import waIcon from "@/assets/wa-icon.png.asset.json";
 import heroImg from "@/assets/hero.jpg";
 import childImg from "@/assets/child.jpg";
 import clinicImg from "@/assets/clinic.jpg";
@@ -294,12 +295,15 @@ function Index() {
             <Button light>Falar com a equipe</Button>
           </div>
           <Marquee label="Exames e serviços" duration={27}>
-            {exams.map(([, name, text, img]) => (
+            {exams.map(([Icon, name, text, img]) => (
               <article className="exam-card" key={name}>
                 <div className="exam-visual">
                   <img src={img} alt={name} loading="lazy" width={800} height={600} />
                 </div>
                 <div className="exam-card-body">
+                  <div className="exam-icon-badge">
+                    <Icon />
+                  </div>
                   <span>EXAME</span>
                   <h3>{name}</h3>
                   <p>{text}</p>
@@ -315,9 +319,6 @@ function Index() {
               <b>COLETA LABORATORIAL</b>
               <span>Praticidade, segurança e acolhimento em cada etapa.</span>
             </div>
-            <a href={wa} target="_blank" rel="noreferrer">
-              Conhecer <ArrowUpRight size={14} />
-            </a>
           </div>
           <div className="section-cta">
             <Button>Agendar meu exame</Button>
@@ -583,7 +584,7 @@ function Index() {
         rel="noreferrer"
         aria-label="Falar com a Pró-Saúde pelo WhatsApp"
       >
-        <Phone />
+        <img src={waIcon.url} alt="WhatsApp" />
       </a>
     </div>
   );
