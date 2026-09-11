@@ -319,9 +319,6 @@ function Index() {
               <b>COLETA LABORATORIAL</b>
               <span>Praticidade, segurança e acolhimento em cada etapa.</span>
             </div>
-            <a href={wa} target="_blank" rel="noreferrer">
-              Conhecer <ArrowUpRight size={14} />
-            </a>
           </div>
           <div className="section-cta">
             <Button>Agendar meu exame</Button>
