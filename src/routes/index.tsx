@@ -252,11 +252,6 @@ function Index() {
               </span>
             </div>
           </div>
-          <div className="hero-message">
-            <small>CUIDADO QUE ACOLHE</small>
-            <strong>Saúde em todas as fases da vida.</strong>
-            <Heart size={22} fill="currentColor" />
-          </div>
         </section>
 
         <section id="especialidades" className="ps-section">
