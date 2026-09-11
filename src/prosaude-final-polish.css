@@ -1,0 +1,108 @@
+/* Pró-Saúde — final alignment and readability polish */
+.ps-page{overflow-x:hidden}
+.ps-page *, .ps-page *::before, .ps-page *::after{box-sizing:border-box}
+
+/* Section headings */
+.ps-section-title,.exam-head>div,.faq-intro,.contact-copy{text-align:center}
+.ps-section-title{margin-left:auto;margin-right:auto}
+.ps-section-title h2,.exam-head h2,.why-card h2,.map-mini h2,.about-copy h2,.faq-intro h2,.ps-contact h2{letter-spacing:-.02em}
+.ps-section-title p,.exam-head p{max-width:760px;margin-left:auto;margin-right:auto}
+
+/* Specialty carousel: fixed geometry, centered content and real image area */
+.specialty-card{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;height:370px!important;min-height:370px!important;padding-bottom:18px!important;position:relative!important}
+.specialty-card::before{flex:0 0 170px!important;height:170px!important;width:100%!important;margin:0!important;display:block!important}
+.specialty-card .card-icon{top:126px!important;left:50%!important;transform:translateX(-50%)!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.specialty-card .card-number{right:16px!important;top:15px!important}
+.specialty-card h3{width:calc(100% - 36px)!important;margin:34px 18px 8px!important;text-align:center!important;line-height:1.2!important}
+.specialty-card p{width:calc(100% - 40px)!important;min-height:58px!important;margin:0 20px!important;text-align:center!important;line-height:1.5!important;display:flex!important;align-items:flex-start!important;justify-content:center!important}
+.specialty-card a{width:calc(100% - 40px)!important;margin:16px 20px 0!important;padding:10px 0 0!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;text-align:center!important;border-top:1px solid #e2ebe6!important}
+
+/* Exam carousel */
+.exam-card{display:flex!important;flex-direction:column!important;overflow:hidden!important;text-align:center!important}
+.exam-visual{width:100%!important;flex:0 0 155px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+.exam-visual img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+.exam-icon{width:68px!important;height:68px!important;border-radius:20px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.exam-card-body{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;flex:1!important;padding:19px 18px!important}
+.exam-card-body>span{margin-bottom:2px!important}
+.exam-card h3{margin:6px 0 7px!important;text-align:center!important;line-height:1.2!important}
+.exam-card p{margin:0 auto!important;max-width:215px!important;text-align:center!important;line-height:1.5!important}
+.exam-card a{margin-top:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important}
+
+/* Child / why / map cards */
+.child-content{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+.child-content h2,.child-content p{max-width:430px!important;text-align:center!important}
+.child-content p{margin-left:auto!important;margin-right:auto!important}
+.child-content .ps-btn{margin-left:auto!important;margin-right:auto!important}
+.why-card{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+.why-card .section-eyebrow{justify-content:center!important}
+.why-card h2,.why-card .why-lead{max-width:430px!important;text-align:center!important}
+.why-list{width:100%!important;display:grid!important;grid-template-columns:1fr 1fr!important;align-items:center!important}
+.why-list p{display:flex!important;align-items:center!important;justify-content:flex-start!important;text-align:left!important;margin:0!important}
+.map-mini{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+.map-mini .section-eyebrow{justify-content:center!important}
+.map-mini>a{left:50%!important;transform:translateX(-50%)!important;display:inline-flex!important;justify-content:center!important;align-items:center!important;white-space:nowrap!important}
+
+/* About */
+.about-copy{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+.about-copy>p{margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+.values{width:100%!important;align-items:stretch!important}
+.values>div{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important}
+.values small{max-width:180px!important}
+.about-copy .ps-btn{margin-left:auto!important;margin-right:auto!important}
+
+/* Reviews */
+.ps-reviews .ps-section-title{text-align:center!important}
+.review-card{display:flex!important;flex-direction:column!important;text-align:center!important}
+.review-top{width:100%!important;display:flex!important;align-items:center!important;text-align:left!important}
+.review-top>div:nth-child(2){text-align:left!important}
+.review-card>p{flex:1!important;width:100%!important;margin:20px 0!important;text-align:center!important;line-height:1.65!important}
+.review-foot{justify-content:center!important;margin-top:auto!important}
+
+/* FAQ */
+.faq-intro{display:flex!important;flex-direction:column!important;align-items:center!important}
+.faq-intro .section-eyebrow{justify-content:center!important}
+.faq-intro p{max-width:430px!important;text-align:center!important}
+.faq-intro .ps-btn{margin-left:auto!important;margin-right:auto!important}
+.faq-list{width:100%!important}
+.faq-item button{display:grid!important;grid-template-columns:34px 1fr 24px!important;align-items:center!important;gap:10px!important;text-align:left!important}
+.faq-item button b{line-height:1.35!important}
+
+/* Contact */
+.contact-copy .ps-logo{margin-left:auto!important;margin-right:auto!important}
+.contact-copy>p{max-width:430px!important;margin-left:auto!important;margin-right:auto!important}
+.contact-details{display:flex!important;flex-direction:column!important;align-items:center!important}
+
+/* Header / buttons */
+.ps-header nav a{white-space:nowrap!important}
+.ps-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;white-space:nowrap!important}
+
+/* Mobile: keep every card readable and centered */
+@media(max-width:900px){
+  .specialty-card{height:355px!important;min-height:355px!important}
+  .specialty-card::before{height:155px!important;flex-basis:155px!important}
+  .specialty-card .card-icon{top:111px!important}
+  .specialty-card h3{margin-top:31px!important}
+  .exam-card{min-height:350px!important}
+  .why-list{grid-template-columns:1fr!important;max-width:320px!important}
+  .why-list p{justify-content:flex-start!important}
+}
+@media(max-width:560px){
+  .ps-section-title h2{font-size:30px!important;line-height:1.12!important}
+  .ps-section-title p,.exam-head p{font-size:13px!important;line-height:1.6!important}
+  .specialty-card{width:265px!important;height:350px!important;min-height:350px!important}
+  .specialty-card::before{height:150px!important;flex-basis:150px!important}
+  .specialty-card .card-icon{top:106px!important;width:56px!important;height:56px!important}
+  .specialty-card h3{font-size:20px!important;margin-top:31px!important}
+  .specialty-card p{font-size:12px!important;width:calc(100% - 34px)!important;margin-left:17px!important;margin-right:17px!important}
+  .exam-card{width:250px!important;min-height:340px!important}
+  .exam-visual{flex-basis:145px!important;height:145px!important}
+  .exam-card h3{font-size:18px!important}
+  .exam-card p{font-size:12px!important}
+  .child-content{width:88%!important;padding:30px 20px!important}
+  .child-content h2{font-size:28px!important;line-height:1.12!important}
+  .why-card h2,.map-mini h2{font-size:28px!important;line-height:1.15!important}
+  .review-card{width:305px!important;min-height:245px!important}
+  .review-card>p{font-size:13px!important}
+  .faq-item button{grid-template-columns:30px 1fr 20px!important;font-size:12px!important}
+  .values{grid-template-columns:1fr!important}
+}
