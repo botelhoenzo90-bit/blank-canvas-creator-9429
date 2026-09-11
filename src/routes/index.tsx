@@ -252,17 +252,13 @@ function Index() {
               </span>
             </div>
           </div>
-          <div className="hero-photo">
-            <img src={heroImg} alt="Família sendo recebida na Clínica Médica Pró-Saúde" width={1600} height={1104} />
-            <div className="hero-photo-overlay" />
-            <div className="hero-logo">
-              <Logo />
-            </div>
-            <div className="hero-message">
-              <small>CUIDADO QUE ACOLHE</small>
-              <strong>Saúde em todas as fases da vida.</strong>
-              <Heart size={22} fill="currentColor" />
-            </div>
+          <div className="hero-logo">
+            <Logo />
+          </div>
+          <div className="hero-message">
+            <small>CUIDADO QUE ACOLHE</small>
+            <strong>Saúde em todas as fases da vida.</strong>
+            <Heart size={22} fill="currentColor" />
           </div>
         </section>
 
@@ -285,9 +281,6 @@ function Index() {
                 <div className="specialty-body">
                   <h3>{name}</h3>
                   <p>{text}</p>
-                  <a className="link-btn" href={wa} target="_blank" rel="noreferrer">
-                    Agendar atendimento <ArrowUpRight size={14} />
-                  </a>
                 </div>
               </article>
             ))}
