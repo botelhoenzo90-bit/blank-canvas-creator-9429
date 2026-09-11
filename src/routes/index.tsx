@@ -311,9 +311,6 @@ function Index() {
                   <span>EXAME</span>
                   <h3>{name}</h3>
                   <p>{text}</p>
-                  <a className="link-btn" href={wa} target="_blank" rel="noreferrer">
-                    Saiba mais <ArrowUpRight size={13} />
-                  </a>
                 </div>
               </article>
             ))}
@@ -481,6 +478,9 @@ function Index() {
               </article>
             ))}
           </Marquee>
+          <div className="section-cta">
+            <Button>Agendar pelo WhatsApp</Button>
+          </div>
           <div className="review-note">
             <CheckCircle2 size={15} /> Atendimento que deixa uma boa impressão do começo ao fim.
           </div>
