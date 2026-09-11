@@ -178,18 +178,31 @@ main { width: 100%; max-width: none; margin: 0; background: #fff; box-shadow: va
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(100deg, rgba(8, 60, 44, 0.88) 0%, rgba(8, 60, 44, 0.62) 55%, rgba(8, 60, 44, 0.25) 100%);
 }
-.hero-copy { position: relative; z-index: 2; padding: 72px 44px; display: flex; flex-direction: column; justify-content: center; gap: 18px; max-width: 680px; }
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  padding: 72px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  max-width: 920px;
+  margin: 0 auto;
+  min-height: clamp(520px, 70vh, 720px);
+}
 .mini-label {
   font-size: 11px; font-weight: 800; letter-spacing: 1.6px;
   text-transform: uppercase; color: var(--green-700);
 }
 .hero-copy .mini-label { color: #bfe8d6; }
-.hero-copy h1 { font-size: clamp(30px, 4vw, 46px); color: #fff; }
+.hero-copy h1 { font-size: clamp(32px, 4.5vw, 52px); color: #fff; }
 .hero-copy h1 em { font-style: italic; color: var(--gold); }
-.hero-copy > p { font-size: 15px; color: rgba(255, 255, 255, 0.9); max-width: 52ch; }
+.hero-copy > p { font-size: 16px; color: rgba(255, 255, 255, 0.92); max-width: 58ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-.hero-trust { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 4px; }
-.hero-trust span { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #e4f4ec; }
+.hero-trust { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 4px; justify-content: center; }
+.hero-trust span { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: #e4f4ec; }
 .hero-trust svg { width: 16px; height: 16px; color: var(--gold); }
 
 /* ---------------- títulos de seção ---------------- */
