@@ -269,7 +269,7 @@ function Index() {
             title="Especialidades para cuidar de você"
             sub="Uma equipe preparada para acompanhar diferentes necessidades, com atenção, precisão e acolhimento."
           />
-          <Marquee label="Especialidades" duration={52}>
+          <Marquee label="Especialidades" duration={30}>
             {specialties.map(([Icon, name, text, img], i) => (
               <article className="specialty-card" key={name}>
                 <div className="specialty-visual">
@@ -305,7 +305,7 @@ function Index() {
             </div>
             <Button light>Falar com a equipe</Button>
           </div>
-          <Marquee label="Exames e serviços" duration={48}>
+          <Marquee label="Exames e serviços" duration={27}>
             {exams.map(([, name, text, img]) => (
               <article className="exam-card" key={name}>
                 <div className="exam-visual">
@@ -461,7 +461,7 @@ function Index() {
             title="Confiança de quem já escolheu a Pró-Saúde"
             sub="Experiências reais de pacientes que encontraram acolhimento, organização e cuidado."
           />
-          <Marquee label="Avaliações de pacientes" duration={56}>
+          <Marquee label="Avaliações de pacientes" duration={32}>
             {reviews.map(([name, text]) => (
               <article className="review-card" key={name}>
                 <div className="review-top">
