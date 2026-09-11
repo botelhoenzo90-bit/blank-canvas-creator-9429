@@ -422,7 +422,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 }
 .about-photo-badge svg { color: #d31515; }
 .about-photo-badge b { font-family: Georgia, serif; font-size: 14px; }
-.about-copy { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.about-copy { display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center; }
 .about-copy h2 { font-size: clamp(24px, 3vw, 34px); color: var(--green-800); }
 .about-copy > p { font-size: 14.5px; color: var(--muted); max-width: 60ch; }
 .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 8px 0 6px; width: 100%; }
