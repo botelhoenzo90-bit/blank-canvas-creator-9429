@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import logoAsset from "@/assets/logo-prosaude.png.asset.json";
+import waIcon from "@/assets/wa-icon.png.asset.json";
 import heroImg from "@/assets/hero.jpg";
 import childImg from "@/assets/child.jpg";
 import clinicImg from "@/assets/clinic.jpg";
