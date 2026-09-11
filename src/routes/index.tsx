@@ -295,12 +295,15 @@ function Index() {
             <Button light>Falar com a equipe</Button>
           </div>
           <Marquee label="Exames e serviços" duration={27}>
-            {exams.map(([, name, text, img]) => (
+            {exams.map(([Icon, name, text, img]) => (
               <article className="exam-card" key={name}>
                 <div className="exam-visual">
                   <img src={img} alt={name} loading="lazy" width={800} height={600} />
                 </div>
                 <div className="exam-card-body">
+                  <div className="exam-icon-badge">
+                    <Icon />
+                  </div>
                   <span>EXAME</span>
                   <h3>{name}</h3>
                   <p>{text}</p>
