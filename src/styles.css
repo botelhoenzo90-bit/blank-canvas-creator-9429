@@ -448,9 +448,9 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 
 /* ---------------- FAQ ---------------- */
 .ps-faq { display: grid; grid-template-columns: 36% 64%; gap: 40px; padding: 56px 32px; background: #fff; }
-.faq-intro { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.faq-intro { display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
 .faq-intro h2 { font-size: clamp(24px, 3vw, 32px); color: var(--green-800); }
-.faq-intro p { font-size: 14px; color: var(--muted); }
+.faq-intro p { font-size: 14px; color: var(--muted); max-width: 54ch; }
 .faq-list { border-top: 1px solid var(--line); }
 .faq-item { border-bottom: 1px solid var(--line); }
 .faq-item button {
