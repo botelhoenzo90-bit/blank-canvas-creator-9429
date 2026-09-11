@@ -296,7 +296,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
   border-radius: var(--radius);
   padding: 22px 26px;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 18px;
 }
@@ -307,11 +307,6 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 }
 .lab-banner b { display: block; font-size: 16px; letter-spacing: 1px; }
 .lab-banner span { font-size: 13px; opacity: 0.9; }
-.lab-banner > a {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: #fff; color: var(--green-700);
-  border-radius: 999px; padding: 12px 20px; font-size: 13px; font-weight: 800;
-}
 
 /* ---------------- três cards ---------------- */
 .ps-three {
