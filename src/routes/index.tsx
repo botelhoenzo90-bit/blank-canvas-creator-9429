@@ -327,7 +327,6 @@ function Index() {
         <section id="atendimento-infantil" className="ps-three">
           <article className="child-card">
             <img src={childImg} alt="Pediatra atendendo crianças" loading="lazy" width={1000} height={1200} />
-            <div className="card-overlay" />
             <div className="child-content">
               <span className="mini-label light-label">Atendimento infantil</span>
               <h2>Cuidado especial para os pequenos.</h2>
