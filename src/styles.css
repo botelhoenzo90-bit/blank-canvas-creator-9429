@@ -18,7 +18,8 @@
   --radius: 18px;
   --shadow-sm: 0 2px 10px rgba(6, 63, 46, 0.08);
   --shadow-md: 0 12px 34px rgba(6, 63, 46, 0.12);
-  --max: 1240px;
+  --max: 100%;
+  --pad: clamp(16px, 4vw, 72px);
 }
 
 * { box-sizing: border-box; }
@@ -40,7 +41,7 @@ p { margin: 0; }
 svg { flex: none; }
 
 .ps-page { min-height: 100vh; overflow-x: clip; }
-main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(--shadow-sm); }
+main { width: 100%; max-width: none; margin: 0; background: #fff; box-shadow: var(--shadow-sm); }
 
 /* ---------------- botões ---------------- */
 .ps-btn {
@@ -101,7 +102,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 18px;
-  padding: 10px max(16px, calc((100% - var(--max)) / 2));
+  padding: 10px var(--pad);
 }
 .ps-header nav {
   display: flex;
@@ -192,7 +193,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .hero-trust svg { width: 16px; height: 16px; color: var(--gold); }
 
 /* ---------------- títulos de seção ---------------- */
-.ps-section { padding: 56px 32px; }
+.ps-section { padding: 56px var(--pad); }
 .ps-section-title { text-align: center; max-width: 720px; margin: 0 auto 30px; display: grid; gap: 10px; justify-items: center; }
 .ps-section-title h2 { font-size: clamp(24px, 3vw, 34px); color: var(--green-800); }
 .ps-section-title p { font-size: 14.5px; color: var(--muted); }
@@ -250,7 +251,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .specialty-card p { font-size: 13.5px; color: var(--muted); flex: 1; }
 
 /* ---------------- exames ---------------- */
-.ps-exams { background: var(--surface); padding: 56px 32px; border-top: 1px solid var(--line); }
+.ps-exams { background: var(--surface); padding: 56px var(--pad); border-top: 1px solid var(--line); }
 .exam-head {
   display: flex;
   flex-direction: column;
@@ -313,7 +314,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 18px;
-  padding: 0 32px 56px;
+  padding: 0 var(--pad) 56px;
   background: var(--surface);
 }
 .ps-three > article { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); min-height: 340px; }
@@ -372,7 +373,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 
 /* ---------------- faixa CTA ---------------- */
 .ps-strip {
-  margin: 0 32px 56px;
+  margin: 0 var(--pad) 56px;
   background: var(--green-700);
   color: #fff;
   border-radius: var(--radius);
@@ -401,7 +402,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .strip-feature b { font-size: 13px; }
 
 /* ---------------- sobre ---------------- */
-.ps-about { display: grid; grid-template-columns: 44% 56%; gap: 30px; padding: 56px 32px; align-items: center; }
+.ps-about { display: grid; grid-template-columns: 44% 56%; gap: 30px; padding: 56px var(--pad); align-items: center; }
 .about-photo { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); min-height: 380px; }
 .about-photo > img { width: 100%; height: 100%; object-fit: cover; }
 .about-photo-badge {
@@ -425,7 +426,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .values small { display: block; font-size: 12px; color: var(--muted); line-height: 1.5; }
 
 /* ---------------- avaliações ---------------- */
-.ps-reviews { background: var(--surface); padding: 56px 32px; }
+.ps-reviews { background: var(--surface); padding: 56px var(--pad); }
 .review-card {
   width: 340px;
   background: #fff;
@@ -449,7 +450,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .review-note { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 20px; font-size: 13px; color: var(--muted); text-align: center; }
 
 /* ---------------- FAQ ---------------- */
-.ps-faq { display: grid; grid-template-columns: 36% 64%; gap: 40px; padding: 56px 32px; background: #fff; }
+.ps-faq { display: grid; grid-template-columns: 36% 64%; gap: 40px; padding: 56px var(--pad); background: #fff; }
 .faq-intro { display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center; }
 .faq-intro h2 { font-size: clamp(24px, 3vw, 32px); color: var(--green-800); }
 .faq-intro p { font-size: 14px; color: var(--muted); max-width: 54ch; }
@@ -468,7 +469,7 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .faq-item > p { font-size: 13.5px; color: var(--muted); margin: 0 0 18px 38px; }
 
 /* ---------------- contato ---------------- */
-.ps-contact { background: var(--surface); padding: 56px 32px; display: grid; grid-template-columns: 38% 62%; gap: 30px; align-items: center; }
+.ps-contact { background: var(--surface); padding: 56px var(--pad); display: grid; grid-template-columns: 38% 62%; gap: 30px; align-items: center; }
 .contact-copy { display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center; }
 .contact-copy h2 { font-size: clamp(23px, 2.8vw, 30px); color: var(--green-800); }
 .contact-copy p { font-size: 14px; color: var(--muted); max-width: 54ch; }
@@ -481,12 +482,12 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 /* ---------------- footer ---------------- */
 footer { background: #fff; }
 .footer-top {
-  max-width: var(--max);
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 1.1fr 1.1fr;
   gap: 34px;
-  padding: 44px 32px;
+  padding: 44px var(--pad);
   border-top: 1px solid var(--line);
 }
 .footer-top > div { display: flex; flex-direction: column; gap: 9px; align-items: flex-start; }
@@ -497,7 +498,7 @@ footer { background: #fff; }
 .footer-bottom {
   background: var(--green-900);
   color: #fff;
-  padding: 16px 32px;
+  padding: 16px var(--pad);
   display: flex;
   flex-wrap: wrap;
   gap: 8px 20px;
