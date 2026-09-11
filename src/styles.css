@@ -518,10 +518,10 @@ footer { background: #fff; }
   .menu-btn { display: block; }
   .mobile-menu { display: flex; }
   .ps-header { grid-template-columns: minmax(0, 1fr) auto auto; }
-  .ps-three { grid-template-columns: 1fr 1fr; }
-  .map-mini { grid-column: span 2; }
-  .ps-strip { grid-template-columns: 1fr 1fr; }
-  .ps-strip > div:first-child, .strip-wa { grid-column: span 2; }
+  .ps-three { grid-template-columns: 1fr; }
+  .map-mini { grid-column: auto; }
+  .ps-strip { gap: 16px 24px; }
+  .ps-strip > div:first-child { flex: 1 1 100%; }
   .about-copy, .ps-about { grid-template-columns: 1fr; }
   .ps-faq, .ps-contact { grid-template-columns: 1fr; }
   .hero-copy { padding: 44px 30px; }
@@ -538,15 +538,10 @@ footer { background: #fff; }
   .hero-actions { justify-content: center; width: 100%; }
   .hero-actions .ps-btn { flex: 1 1 100%; }
   .hero-trust { justify-content: center; }
-  .hero-photo { min-height: 300px; order: -1; }
-  .hero-logo { left: 14px; bottom: 14px; padding: 8px 14px 8px 8px; }
-  .hero-message { right: 14px; top: 14px; max-width: 170px; }
-  .hero-message strong { font-size: 16px; }
   .ps-section, .ps-exams, .ps-about, .ps-reviews, .ps-faq, .ps-contact { padding: 40px 16px; }
   .ps-three { grid-template-columns: 1fr; padding: 0 16px 40px; }
-  .map-mini { grid-column: auto; }
-  .ps-strip { margin: 0 16px 40px; grid-template-columns: 1fr; text-align: center; padding: 22px 18px; }
-  .ps-strip > div:first-child, .strip-wa { grid-column: auto; }
+  .ps-strip { margin: 0 16px 40px; padding: 22px 18px; }
+  .ps-strip > div:first-child { flex: 1 1 100%; }
   .strip-wa { justify-content: center; }
   .strip-feature { border-left: 0; padding-left: 0; justify-content: center; }
   .exam-head { grid-template-columns: 1fr; }
