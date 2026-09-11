@@ -186,22 +186,10 @@ main { max-width: var(--max); margin: 0 auto; background: #fff; box-shadow: var(
 .hero-copy h1 { font-size: clamp(30px, 4vw, 46px); color: #fff; }
 .hero-copy h1 em { font-style: italic; color: var(--gold); }
 .hero-copy > p { font-size: 15px; color: rgba(255, 255, 255, 0.9); max-width: 52ch; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .hero-trust { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 4px; }
 .hero-trust span { display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; color: #e4f4ec; }
 .hero-trust svg { width: 16px; height: 16px; color: var(--gold); }
-.hero-logo {
-  position: absolute; left: 22px; bottom: 22px; z-index: 2;
-  background: #fff; border: 3px solid var(--gold); border-radius: 999px;
-  padding: 10px 18px 10px 12px; box-shadow: var(--shadow-md);
-}
-.hero-message {
-  position: absolute; right: 22px; top: 24px; z-index: 2;
-  text-align: right; color: #fff; max-width: 240px;
-}
-.hero-message small { font-size: 10px; letter-spacing: 2px; font-weight: 800; opacity: 0.9; }
-.hero-message strong { display: block; font-family: Georgia, serif; font-size: 22px; line-height: 1.2; margin-top: 6px; }
-.hero-message svg { color: var(--gold); margin: 10px 0 0 auto; }
 
 /* ---------------- títulos de seção ---------------- */
 .ps-section { padding: 56px 32px; }
