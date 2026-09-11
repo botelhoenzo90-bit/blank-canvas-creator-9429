@@ -405,14 +405,6 @@ function Index() {
         <section id="a-clinica" className="ps-about">
           <div className="about-photo">
             <img src={clinicImg} alt="Recepção da Clínica Médica Pró-Saúde" loading="lazy" width={1200} height={1000} />
-            <div className="about-photo-badge">
-              <Heart fill="currentColor" />
-              <span>
-                Um ambiente
-                <br />
-                <b>feito para acolher</b>
-              </span>
-            </div>
           </div>
           <div className="about-copy">
             <span className="section-eyebrow">A Clínica Médica Pró-Saúde</span>
