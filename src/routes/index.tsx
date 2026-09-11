@@ -584,7 +584,7 @@ function Index() {
         rel="noreferrer"
         aria-label="Falar com a Pró-Saúde pelo WhatsApp"
       >
-        <Phone />
+        <img src={waIcon.url} alt="WhatsApp" />
       </a>
     </div>
   );
