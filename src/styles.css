@@ -373,7 +373,7 @@ main { width: 100%; max-width: none; margin: 0; background: #fff; box-shadow: va
 
 /* ---------------- faixa CTA ---------------- */
 .ps-strip {
-  margin: 0 32px 56px;
+  margin: 0 var(--pad) 56px;
   background: var(--green-700);
   color: #fff;
   border-radius: var(--radius);
