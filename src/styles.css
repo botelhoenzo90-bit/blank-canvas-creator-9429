@@ -614,3 +614,6 @@ footer { background: #fff; }
   background: var(--green-700); color: #fff;
   border-radius: 999px; padding: 11px 18px; font-size: 13px; font-weight: 700;
 }
+
+/* ocultar badge do Lovable */
+#lovable-badge { display: none !important; }
