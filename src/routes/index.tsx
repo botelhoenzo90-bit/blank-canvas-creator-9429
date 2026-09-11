@@ -472,35 +472,6 @@ function Index() {
           </div>
         </section>
 
-        <section id="duvidas" className="ps-faq">
-          <div className="faq-intro">
-            <span className="section-eyebrow">Dúvidas frequentes</span>
-            <h2>Tem alguma dúvida?</h2>
-            <p>
-              Reunimos respostas rápidas para facilitar seu atendimento. Se precisar, fale diretamente com nossa
-              equipe.
-            </p>
-            <Button>Tirar minha dúvida</Button>
-          </div>
-          <div className="faq-list">
-            {faqs.map((q, i) => (
-              <div className={`faq-item ${faq === i ? "open" : ""}`} key={q}>
-                <button onClick={() => setFaq(faq === i ? null : i)} aria-expanded={faq === i}>
-                  <span>0{i + 1}</span>
-                  <b>{q}</b>
-                  <ChevronDown />
-                </button>
-                {faq === i && (
-                  <p>
-                    Fale com nossa equipe pelo WhatsApp para receber todas as orientações de acordo com o seu
-                    atendimento.
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section id="contato" className="ps-contact">
           <div className="contact-copy">
             <span className="section-eyebrow">Onde estamos · Fale com a Pró-Saúde</span>
@@ -535,6 +506,35 @@ function Index() {
               src="https://www.google.com/maps?q=Clinica%20Medica%20Pro-Saude%20Macurure%20BA&output=embed"
               loading="lazy"
             />
+          </div>
+        </section>
+
+        <section id="duvidas" className="ps-faq">
+          <div className="faq-intro">
+            <span className="section-eyebrow">Dúvidas frequentes</span>
+            <h2>Tem alguma dúvida?</h2>
+            <p>
+              Reunimos respostas rápidas para facilitar seu atendimento. Se precisar, fale diretamente com nossa
+              equipe.
+            </p>
+            <Button>Tirar minha dúvida</Button>
+          </div>
+          <div className="faq-list">
+            {faqs.map((q, i) => (
+              <div className={`faq-item ${faq === i ? "open" : ""}`} key={q}>
+                <button onClick={() => setFaq(faq === i ? null : i)} aria-expanded={faq === i}>
+                  <span>0{i + 1}</span>
+                  <b>{q}</b>
+                  <ChevronDown />
+                </button>
+                {faq === i && (
+                  <p>
+                    Fale com nossa equipe pelo WhatsApp para receber todas as orientações de acordo com o seu
+                    atendimento.
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         </section>
       </main>
