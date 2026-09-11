@@ -327,6 +327,9 @@ function Index() {
               Conhecer <ArrowUpRight size={14} />
             </a>
           </div>
+          <div className="section-cta">
+            <Button>Agendar meu exame</Button>
+          </div>
         </section>
 
         <section id="atendimento-infantil" className="ps-three">
